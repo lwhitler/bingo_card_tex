@@ -1,2 +1,2 @@
-# bingo_card_tex
+# Bingo Card LaTeX
 Write a TeX file to construct bingo cards
