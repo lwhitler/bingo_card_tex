@@ -1,6 +1,5 @@
 import numpy as np
 import string
-import random
 import argparse
 
 
@@ -168,7 +167,7 @@ if __name__ == '__main__':
         # Make a sequence with the correct number of columns, to be unpacked
         # for each row later - this is the part with the information about the
         # dimensions (starts at 1, not zero)
-        f.write('\def\Sequence{' + ', '.join([str(int(n_col+1))
+        f.write(r'\def\Sequence{' + ', '.join([str(int(n_col+1))
                 for n_col in range(args.n_cols)]) + '}' + '\n\n')
     
         # Now define the square for a given bingo entry
@@ -209,8 +208,8 @@ if __name__ == '__main__':
                 f.write(r'\node [Square] at ($(\col,-' + str(i+1) +
                         r')-(0.5,0.5)$) {\pgfmathparse{\row[\col-1]}' +
                         r'\pgfmathresult};' + '\n')
-            f.write('}\n\end{tikzpicture}' +r'\vspace*{\fill}\newpage' +
-                    '\n\n')
+            f.write(r'}' + '\n' + r'\end{tikzpicture}' +
+                    r'\vspace*{\fill}\newpage' + '\n\n')
 
     with open(args.save_file, 'a') as f:
         # Now close the document
