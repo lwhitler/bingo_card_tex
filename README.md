@@ -8,7 +8,7 @@ Write a TeX file to construct bingo cards
 
 The only truly required command line argument is the file containing the entries to be used in the cards, which is assumed to have one entry per line.
 
-As of March 29, 2024, I know that the resulting TeX file compiles in Overleaf using pdfLaTeX and Tex Live 2023. Nothing else has been tested.
+As of March 29, 2024, the TeX file resulting from `make_bingo_card.py` compiles in Overleaf using pdfLaTeX and Tex Live 2023. Nothing else has been tested.
 
 ### Example usage:
 
